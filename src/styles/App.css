@@ -4,11 +4,19 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "ProximaNova";  
+  src: url("../../public/fonts/ProximaNova-Regular.ttf") format("truetype"); 
+  font-style: normal; 
+  font-weight: normal;
+   }
+
 #root {
   display: flex;
   justify-content: center;
   background-color: #faa;
   height: 100%;
+  font-family: ProximaNova;
 }
 
 .wrapper {
@@ -18,4 +26,26 @@
   padding: 40px;
   border-radius: 10px;
   max-width: 1400px;
+}
+
+.header {
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__logo{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.header__cart{
+  padding: 10px 20px;
+  min-width: 100px;
+  display: inline-block;
+  background-color:#faa;
+  border-radius: 30px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid transparent;
 }
