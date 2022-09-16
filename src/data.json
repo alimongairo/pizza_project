@@ -3,6 +3,7 @@
         "id": 1,
         "imgUrl": "img/pizza_1.png",
         "name": "Пепперони",
+        "category": 1,
         "types": [0, 1],
         "sizes": [26, 30, 40],
         "prices": [350, 370, 390]
@@ -11,6 +12,7 @@
         "id": 2,
         "imgUrl": "img/pizza_2.png",
         "name": "Пе",
+        "category": 2,
         "types": [0, 1],
         "sizes": [30, 40],
         "prices": [351, 371, 391]
@@ -19,6 +21,7 @@
         "id": 3,
         "imgUrl": "img/pizza_3.png",
         "name": "рони",
+        "category": 1,
         "types": [0, 1],
         "sizes": [26, 30, 40],
         "prices": [352, 372, 392]
@@ -27,6 +30,7 @@
         "id": 4,
         "imgUrl": "img/pizza_4.png",
         "name": "ппе",
+        "category": 2,
         "types": [0, 1],
         "sizes": [26, 30],
         "prices": [353, 373, 393]
