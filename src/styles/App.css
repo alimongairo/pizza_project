@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  background-color: #faa;
+  height: 100%;
+}
+
+.wrapper {
+  width: calc(100vw - 100px);
+  background-color: #fff;
+  margin: 50px auto;
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 1400px;
+}
