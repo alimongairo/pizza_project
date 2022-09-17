@@ -47,12 +47,12 @@ function PizzaBlock(props) {
       <div>
         <div className="pizza-block__price">{props.prices[activePrice]} ₽</div>
         <button className="pizza-block__button" onClick={() => onClickDeleteButton()}>
-          -
+          &ndash;
         </button>
         <span>В корзине</span>
         <span className="pizza-block__amount">{amount}</span>
         <button className="pizza-block__button" onClick={() => onClickAddButton()}>
-          +
+          &#10010;
         </button>
       </div>
     </div>

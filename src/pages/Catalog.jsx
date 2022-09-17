@@ -2,7 +2,6 @@ import React from 'react';
 import '../styles/App.css';
 import axios from 'axios'
 
-import Header from '../components/Header'
 import Categories from '../components/Categories';
 import PizzaBlock from '../components/PizzaBlock';
 
@@ -17,19 +16,20 @@ function Catalog() {
   }
 
   return (
-    <div className="wrapper">
-      <Header />
+    <div>
       <Categories />
-      <div className="content">
-        {items.map((obj) => (
-          <PizzaBlock
-            title={obj.name}
-            prices={obj.prices}
-            img={obj.imgUrl}
-            sizes={obj.sizes}
-            types={obj.types}
-            key={obj.id}
-          />))}
+      <div className='content__wrapper'>
+        <div className="content">
+            {items.map((obj) => (
+            <PizzaBlock
+                title={obj.name}
+                prices={obj.prices}
+                img={obj.imgUrl}
+                sizes={obj.sizes}
+                types={obj.types}
+                key={obj.id}
+            />))}
+        </div>
       </div>
     </div>
   );
