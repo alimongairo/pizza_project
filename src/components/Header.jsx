@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 function Header() {
     return (
@@ -7,9 +8,9 @@ function Header() {
             <h1>Project</h1>
           </div>
           <div className="header__cart">
-            <a href="/cart.html">
+            <Link to="/cart">
               <img src="img/cart.png" alt="cart" width={25}/>
-            </a>
+            </Link>
           </div>
       </div>
     );

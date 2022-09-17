@@ -61,7 +61,7 @@
   justify-content: space-between;
 }
 
-.categories li{
+.categories li {
   padding: 10px 20px;
   margin-inline: 10px;
   min-width: 100px;
@@ -77,7 +77,11 @@
   background-color: #faa;
 }
 
-.categories li:hover  {
+.categories .active:hover {
+  background-color: #faa;
+}
+
+.categories li:hover {
   background-color: #f3f3f3;
 }
 
@@ -169,6 +173,6 @@
   border: 1px solid transparent;
 }
 
-.pizza-block__button:hover{
+.pizza-block__button:hover {
   background-color: #f3f3f3;
 }
