@@ -1,15 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import styles from './Header.module.css';
+
+console.log(styles);
 
 function Header() {
   return (
-    <div className="header">
-      <div className="header__logo">
+    <div className={styles.header}>
+      <div className={styles.logo}>
         <Link to="/">
           <h1>Pizza&nbsp;Project</h1>
         </Link>
       </div>
-      <div className="header__cart">
+      <div className={styles.cart}>
         <Link to="/cart">
           <img src="img/cart.png" alt="cart" width={25} />
         </Link>

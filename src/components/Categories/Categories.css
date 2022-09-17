@@ -1,0 +1,31 @@
+.categories {
+    font-weight: bold;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+.categories li {
+  padding: 10px 20px;
+  margin: 10px;
+  min-width: 100px;
+  display: inline-block;
+  background-color: #fff;
+  border: 3px solid #faa;
+  border-radius: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.categories .active {
+  background-color: #faa;
+}
+
+.categories .active:hover {
+  background-color: #faa;
+}
+
+.categories li:hover {
+  background-color: #f3f3f3;
+}

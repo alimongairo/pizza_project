@@ -1,0 +1,25 @@
+.cart {
+    padding: 15px 100px 30px 100px;
+  }
+  
+.header {
+display: flex;
+justify-content: space-between;
+margin: 20px 100px;
+}
+
+.footer {
+display: flex;
+justify-content: space-between;
+margin: 60px 40px 10px 40px;
+}
+
+.clear_btn {
+cursor: pointer;
+text-decoration: underline;
+}
+
+.item_container {
+display: flex;
+justify-content: center;
+}

@@ -1,9 +1,9 @@
 import React from 'react';
-import '../styles/App.css';
+import styles from './Catalog.module.css';
 import axios from 'axios'
 
-import Categories from '../components/Categories';
-import PizzaBlock from '../components/PizzaBlock';
+import Categories from '../../components/Categories/Categories';
+import PizzaBlock from '../../components/PizzaBlock/PizzaBlock';
 
 function Catalog() {
   const [items, setItems] = React.useState([]);
@@ -18,8 +18,8 @@ function Catalog() {
   return (
     <div>
       <Categories />
-      <div className='content__wrapper'>
-        <div className="content">
+      <div className={styles.wrapper}>
+        <div className={styles.content}>
             {items.map((obj) => (
             <PizzaBlock
                 title={obj.name}

@@ -1,4 +1,5 @@
 import React from 'react';
+import './PizzaBlock.css'
 
 function PizzaBlock(props) {
   const doughType = ['тонкое', 'классическое'];
