@@ -1,26 +1,26 @@
 .header {
-    padding: 15px 40px 30px 40px;
-    display: flex;
-    justify-content: space-between;
-  }
-  
+  padding: 15px 40px 30px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .logo {
   margin-top: auto;
   margin-bottom: auto;
 }
 
-.logo a {
+a {
   text-decoration: none;
   color: black;
+  display: flex;
+  justify-content: space-between;
 }
 
 .cart {
   padding: 10px 20px;
-  width: 100px;
-  display: inline-block;
+  width: 150px;
   background-color: #faa;
   border-radius: 30px;
-  text-align: center;
   cursor: pointer;
   border: 1px solid transparent;
 }

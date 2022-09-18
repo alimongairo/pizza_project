@@ -1,24 +1,38 @@
 import React from 'react';
 import styles from './CartItem.module.css';
+import { useDispatch } from 'react-redux';
+import { removeItem } from '../../redux/slices/cartSlice';
 
-function CartItem() {
+function CartItem(props) {
+  const dispatch = useDispatch();
+
+  const onClickRemove = () => {
+    if (window.confirm('Удалить товар из корзины?')){
+      dispatch(removeItem(props.id));
+    }
+  };
+
   return (
     <div className={styles.cart_item}>
       <div className={styles.block}>
-        <img src="./img/pizza_1.png" alt="Added Pizza" className={styles.image} />
+        <img src={props.image} alt="Added Pizza" className={styles.image} />
       </div>
       <div className={styles.block}>
-        <h3 className={styles.title}>Title</h3>
-        <div className={styles.params}>dough size</div>
+        <h3 className={styles.title}>{props.title}</h3>
+        <div className={styles.params}>
+          {props.type}, {props.size} см
+        </div>
       </div>
       <div className={styles.block}>
-        <button className={styles.button}>&ndash;</button>
-        <span>amount</span>
-        <button className={styles.button}>&#10010;</button>
+        {/* <button className={styles.button}>&ndash;</button>
+        <span>{props.amount}</span>
+        <button className={styles.button}>&#10010;</button> */}
       </div>
-      <div className={styles.block}>price</div>
       <div className={styles.block}>
-        <button className={styles.button}>&#10006;</button>
+        <span className={styles.price}>{props.price} ₽</span>
+      </div>
+      <div className={styles.block}>
+        <button className={styles.button} onClick={onClickRemove}>&#10006;</button>
       </div>
     </div>
   );

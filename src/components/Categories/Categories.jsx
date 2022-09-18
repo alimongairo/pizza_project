@@ -1,14 +1,8 @@
 import React from 'react';
 import './Categories.css'
 
-function Categories() {
+function Categories({id, onClickCat}) {
   const categories = ['Все', 'Мясные', 'Вегетарианские'];
-
-  const [activeCat, setActiveCat] = React.useState(0);
-
-  const onClickCat = (idx) => {
-    setActiveCat(idx);
-  };
 
   return (
     <div className="categories">
@@ -17,7 +11,7 @@ function Categories() {
           <li
             key={idx}
             onClick={() => onClickCat(idx)}
-            className={activeCat === idx ? 'active' : ''}>
+            className={id === idx ? 'active' : ''}>
             {title}
           </li>
         ))}

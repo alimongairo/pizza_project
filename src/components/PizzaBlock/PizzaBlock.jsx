@@ -1,20 +1,32 @@
 import React from 'react';
 import './PizzaBlock.css'
+import { useDispatch } from 'react-redux';
+import { addItem } from '../../redux/slices/cartSlice';
+
+const doughType = ['тонкое', 'классическое'];
+const sizeType = ['26', '30', '40'];
 
 function PizzaBlock(props) {
-  const doughType = ['тонкое', 'классическое'];
   const [activeType, setActiveType] = React.useState(0);
   const [activeSize, setActiveSize] = React.useState(0);
   const [activePrice, setActivePrice] = React.useState(0);
-  const [amount, setAmount] = React.useState(0);
+  const dispatch = useDispatch();
 
   const onClickAddButton = () => {
-    setAmount(amount + 1);
+    const item = {
+      id: props.id,
+      title: props.title, 
+      price: props.prices[activeSize],
+      image: `../${props.img}`,
+      type: doughType[activeType],
+      size: sizeType[activeSize]
+    };
+    dispatch(addItem(item));
   };
 
-  const onClickDeleteButton = () => {
-    setAmount(amount - 1);
-  };
+  // const onClickDeleteButton = () => {
+  //   setAmount(amount - 1);
+  // };
 
   return (
     <div className="pizza-block">
@@ -47,13 +59,13 @@ function PizzaBlock(props) {
       </div>
       <div>
         <div className="pizza-block__price">{props.prices[activePrice]} ₽</div>
-        <button className="pizza-block__button" onClick={() => onClickDeleteButton()}>
+        {/* <button className="pizza-block__button" onClick={() => onClickDeleteButton()}>
           &ndash;
-        </button>
-        <span>В корзине</span>
-        <span className="pizza-block__amount">{amount}</span>
+        </button> */}
+        {/* <span>В корзине</span>
+        <span className="pizza-block__amount">{addedAmount}</span> */}
         <button className="pizza-block__button" onClick={() => onClickAddButton()}>
-          &#10010;
+          &#10010; Добавить
         </button>
       </div>
     </div>

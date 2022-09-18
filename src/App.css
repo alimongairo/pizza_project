@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: 'ProximaNova';
-  src: url('../../public/fonts/ProximaNova-Regular.ttf') format('truetype');
+  src: url('../public/fonts/ProximaNova-Regular.ttf') format('truetype');
   font-style: normal;
   font-weight: normal;
 }

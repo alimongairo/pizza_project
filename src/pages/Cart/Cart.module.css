@@ -1,25 +1,32 @@
 .cart {
-    padding: 15px 100px 30px 100px;
-  }
-  
+  padding: 15px 100px 30px 100px;
+}
+
 .header {
-display: flex;
-justify-content: space-between;
-margin: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 100px;
 }
 
 .footer {
-display: flex;
-justify-content: space-between;
-margin: 60px 40px 10px 40px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 100px;
+  padding-top: 50px;
 }
 
 .clear_btn {
-cursor: pointer;
-text-decoration: underline;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .item_container {
-display: flex;
-justify-content: center;
+  display: inline-block;
+}
+
+.empty {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  color: darkgrey;
 }
